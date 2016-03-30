@@ -1,6 +1,11 @@
 
 # README
 
+This project aims to help me understand why SBT does not show the dependencies I would expect. 
+It tells that this project depends on `hadoop-yarn-server-nodemanager` (which is okay, as can be seen in `build.sbt`). However it also tells that `hadoop-yarn-server-nodemanager` depends on `guice-servlet`, while 
+[its POM](https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-yarn-server-nodemanager/2.2.0/hadoop-yarn-server-nodemanager-2.2.0.pom) does not depend on it.
+
+
 ```
 user@laptop:~/workspace/pack$ sbt dependency-tree
 
