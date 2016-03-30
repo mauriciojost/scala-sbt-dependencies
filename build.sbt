@@ -8,11 +8,7 @@ organization := "eu.pepot.eu"
 
 version := "0.1"
 
-scalaVersion := "2.10.4"
-
-scalacOptions ++= Seq("-deprecation", "-feature", "-unchecked")
-
-libraryDependencies += "org.apache.spark" %% "spark-core" % "1.5.2"
+libraryDependencies += "org.apache.hadoop" % "hadoop-yarn-server-nodemanager" % "2.2.0"
 
 mergeStrategy in assembly <<= (mergeStrategy in assembly) { mergeStrategy => {
     case entry => {
@@ -22,7 +18,6 @@ mergeStrategy in assembly <<= (mergeStrategy in assembly) { mergeStrategy => {
     }
   }
 }
-
 
 packageArchetype.java_application
 
